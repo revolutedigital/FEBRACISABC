@@ -202,22 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ============ TRAINER SECTION ============
-  const trainerImage = document.querySelector('.trainer-image-wrapper');
-  const trainerText = document.querySelector('.trainer-text');
-  if (trainerImage) {
-    gsap.from(trainerImage, {
-      x: mobileAnim ? 0 : -80, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
-      scrollTrigger: { trigger: trainerImage, start: 'top 80%', once: true }
-    });
-  }
-  if (trainerText) {
-    gsap.from(trainerText, {
-      x: mobileAnim ? 0 : 80, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
-      scrollTrigger: { trigger: trainerText, start: 'top 80%', once: true }
-    });
-  }
-
   // ============ VISUAL BREAK ============
   const visualBreak = document.querySelector('.visual-break blockquote');
   if (visualBreak) {
