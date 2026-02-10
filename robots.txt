@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://febracisabc.com.br/sitemap.xml

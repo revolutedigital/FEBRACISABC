@@ -1,0 +1,17 @@
+{
+  "name": "Método CIS 248 - Febracis ABC Paulista",
+  "short_name": "CIS 248",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4A849",
+  "description": "O maior treinamento de Inteligência Emocional do mundo. Garanta sua vaga na Edição 248.",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
