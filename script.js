@@ -143,9 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '.pillars-grid',
     '.learnings-grid',
     '.audience-grid',
-    '.testimonials-grid',
+    '.testimonials-video-grid',
     '.laws-grid'
   ];
+
+  const mobileAnim = window.matchMedia('(max-width: 768px)').matches;
 
   cardGrids.forEach(selector => {
     const grid = document.querySelector(selector);
@@ -153,10 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cards = grid.children;
     gsap.from(cards, {
-      y: 60,
+      y: mobileAnim ? 30 : 60,
       opacity: 0,
-      duration: 0.8,
-      stagger: 0.1,
+      duration: mobileAnim ? 0.5 : 0.8,
+      stagger: mobileAnim ? 0.06 : 0.1,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: grid,
@@ -216,13 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const methodVisual = document.querySelector('.method-visual');
   if (methodText) {
     gsap.from(methodText, {
-      x: -60, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : -60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: methodText, start: 'top 80%', once: true }
     });
   }
   if (methodVisual) {
     gsap.from(methodVisual, {
-      x: 60, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : 60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: methodVisual, start: 'top 80%', once: true }
     });
   }
@@ -241,13 +243,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const pauloText = document.querySelector('.paulo-text');
   if (pauloImage) {
     gsap.from(pauloImage, {
-      x: -80, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : -80, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: pauloImage, start: 'top 80%', once: true }
     });
   }
   if (pauloText) {
     gsap.from(pauloText, {
-      x: 80, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : 80, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: pauloText, start: 'top 80%', once: true }
     });
   }
@@ -373,8 +375,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateCountdownSR, 60000);
 
   // ============ MAGNETIC BUTTONS ============
-  // Only on non-touch devices
-  if (!('ontouchstart' in window)) {
+  // Only on non-touch desktop devices
+  const isMobile = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window);
+  if (!isMobile) {
     document.querySelectorAll('.btn-primary').forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
         const rect = btn.getBoundingClientRect();
@@ -746,13 +749,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const localMap = document.querySelector('.local-map');
   if (localInfo) {
     gsap.from(localInfo, {
-      x: -60, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : -60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: localInfo, start: 'top 80%', once: true }
     });
   }
   if (localMap) {
     gsap.from(localMap, {
-      x: 60, opacity: 0, duration: 1, ease: 'power3.out',
+      x: mobileAnim ? 0 : 60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: localMap, start: 'top 80%', once: true }
     });
   }
