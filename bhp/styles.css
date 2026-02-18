@@ -173,6 +173,15 @@ section { padding: 100px 0; }
 .trainer-title { font-size: 1rem; color: var(--blue-light); margin-bottom: 24px; }
 .trainer-text p { color: var(--gray-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
 
+/* ----- Mentor Section ----- */
+.section-mentor { background: var(--dark); padding: 100px 0; }
+.mentor-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+.mentor-image { position: relative; }
+.mentor-photo { width: 100%; max-width: 420px; border-radius: 16px; display: block; }
+.mentor-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; color: var(--white); }
+.mentor-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; }
+.mentor-content p { font-size: 1rem; color: var(--gray-light); line-height: 1.7; margin-bottom: 16px; }
+
 /* ----- CTA Section ----- */
 .section-cta { background: radial-gradient(ellipse at 30% 40%, rgba(27,63,123,0.2) 0%, transparent 50%), radial-gradient(ellipse at 70% 60%, rgba(212,168,73,0.08) 0%, var(--dark) 70%); padding: 120px 0; text-align: center; }
 .cta-badge { display: inline-block; background: rgba(27,63,123,0.15); border: 1px solid rgba(27,63,123,0.3); padding: 8px 24px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 28px; }
@@ -295,6 +304,8 @@ input:focus-visible { outline: none; }
   .method-visual .big-number { font-size: 5rem; }
   .tools-grid { grid-template-columns: 1fr; }
   .audience-grid { grid-template-columns: 1fr; }
+  .mentor-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .mentor-photo { max-width: 280px; margin: 0 auto; }
   .trainer-content { grid-template-columns: 1fr; gap: 32px; }
   .trainer-image-wrapper { max-width: 300px; margin: 0 auto; }
   .trainer-text h3 { text-align: center; font-size: 2rem; }
