@@ -89,9 +89,13 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="heroVideo">
             <source src="https://raw.githubusercontent.com/revolutedigital/FEBRACISABC/main/bhp-hero.mp4" type="video/mp4">
         </video>
+        <script>
+          var hv = document.getElementById('heroVideo');
+          hv.addEventListener('loadedmetadata', function() { hv.currentTime = 30; });
+        </script>
         <div class="hero-overlay" aria-hidden="true"></div>
 
         <!-- Ambient Orbs -->
