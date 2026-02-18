@@ -575,13 +575,6 @@
                     </span>
                 </div>
                 <div class="form-group">
-                    <label for="capture-phone" class="sr-only">Telefone com DDD</label>
-                    <input type="tel" id="capture-phone" placeholder="Telefone com DDD" required autocomplete="tel" aria-required="true" inputmode="tel">
-                    <span class="form-check" aria-hidden="true">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    </span>
-                </div>
-                <div class="form-group">
                     <label for="capture-email" class="sr-only">Seu melhor e-mail</label>
                     <input type="email" id="capture-email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-required="true" inputmode="email">
                     <span class="form-check" aria-hidden="true">
@@ -589,11 +582,29 @@
                     </span>
                 </div>
                 <div class="form-group">
-                    <label for="capture-company" class="sr-only">Nome da empresa (opcional)</label>
-                    <input type="text" id="capture-company" placeholder="Nome da empresa (opcional)" autocomplete="organization">
+                    <label for="capture-whatsapp" class="sr-only">WhatsApp com DDD</label>
+                    <input type="tel" id="capture-whatsapp" placeholder="WhatsApp com DDD" required autocomplete="tel" aria-required="true" inputmode="tel">
                     <span class="form-check" aria-hidden="true">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </span>
+                </div>
+                <div class="form-group">
+                    <label for="capture-cargo" class="sr-only">Cargo</label>
+                    <input type="text" id="capture-cargo" placeholder="Cargo" required autocomplete="organization-title" aria-required="true">
+                    <span class="form-check" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="capture-faturamento" class="sr-only">Faturamento médio da empresa (mensal)</label>
+                    <select id="capture-faturamento" required aria-required="true">
+                        <option value="" disabled selected>Faturamento médio da empresa (mensal)</option>
+                        <option value="Até 100 mil">Até 100 mil</option>
+                        <option value="De 101 mil a 500 mil">De 101 mil a 500 mil</option>
+                        <option value="500 mil a 1 milhão">500 mil a 1 milhão</option>
+                        <option value="2 milhões a 50 milhões">2 milhões a 50 milhões</option>
+                        <option value="Mais de 50 milhões">Mais de 50 milhões</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn-primary">
                     Enviar e Garantir Minha Vaga

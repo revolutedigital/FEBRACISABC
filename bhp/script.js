@@ -347,6 +347,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const captureForm = document.getElementById('captureForm');
   if (captureForm) {
     const formInputs = captureForm.querySelectorAll('.form-group input');
+    const formSelect = captureForm.querySelector('#capture-faturamento');
+
     formInputs.forEach(input => {
       input.addEventListener('input', () => {
         if (input.value.trim().length > 0 && input.checkValidity()) {
@@ -370,6 +372,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    if (formSelect) {
+      formSelect.addEventListener('change', () => {
+        formSelect.classList.remove('invalid');
+        formSelect.style.color = '#fff';
+        if (!captureForm.dataset.touched) {
+          captureForm.dataset.touched = 'true';
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({ event: 'form_start', form_type: 'bhp_capture' });
+          }
+        }
+      });
+    }
+
     captureForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -380,21 +395,27 @@ document.addEventListener('DOMContentLoaded', () => {
           valid = false;
         }
       });
+      if (formSelect && !formSelect.value) {
+        formSelect.classList.add('invalid');
+        valid = false;
+      }
       if (!valid) return;
 
       const name = captureForm.querySelector('#capture-name').value;
-      const phone = captureForm.querySelector('#capture-phone').value;
       const email = captureForm.querySelector('#capture-email').value;
-      const company = captureForm.querySelector('#capture-company') ? captureForm.querySelector('#capture-company').value : '';
+      const whatsapp = captureForm.querySelector('#capture-whatsapp').value;
+      const cargo = captureForm.querySelector('#capture-cargo').value;
+      const faturamento = formSelect ? formSelect.value : '';
 
       if (typeof dataLayer !== 'undefined') {
         dataLayer.push({
           event: 'form_submit',
           form_type: 'bhp_capture',
           lead_name: name,
-          lead_phone: phone,
           lead_email: email,
-          lead_company: company
+          lead_whatsapp: whatsapp,
+          lead_cargo: cargo,
+          lead_faturamento: faturamento
         });
       }
 
