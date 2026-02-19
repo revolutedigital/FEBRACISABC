@@ -174,12 +174,12 @@ section { padding: 100px 0; }
 .trainer-text p { color: var(--gray-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
 
 /* ----- Mentor Section ----- */
-.section-mentor { background: var(--dark); padding: 100px 0; overflow: hidden; }
+.section-mentor { background: #000; padding: 100px 0; overflow: hidden; }
 .mentor-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
 .mentor-image { position: relative; display: flex; justify-content: center; }
-.mentor-photo { width: 100%; max-width: 340px; border-radius: 12px; display: block; }
+.mentor-photo { width: 100%; max-width: 400px; display: block; }
 .mentor-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; color: var(--white); }
-.mentor-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; }
+.mentor-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; }
 .mentor-content p { font-size: 0.95rem; color: var(--gray-light); line-height: 1.7; margin-bottom: 16px; }
 
 /* ----- CTA Section ----- */
@@ -307,7 +307,7 @@ input:focus-visible { outline: none; }
   .section-mentor { padding: 64px 0; }
   .mentor-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
   .mentor-image { order: -1; }
-  .mentor-photo { max-width: 200px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; object-fit: cover; object-position: top; }
+  .mentor-photo { max-width: 240px; margin: 0 auto; }
   .trainer-content { grid-template-columns: 1fr; gap: 32px; }
   .trainer-image-wrapper { max-width: 300px; margin: 0 auto; }
   .trainer-text h3 { text-align: center; font-size: 2rem; }
