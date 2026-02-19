@@ -174,7 +174,7 @@ section { padding: 100px 0; }
 .trainer-text p { color: var(--gray-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
 
 /* ----- Mentor Section ----- */
-.section-mentor { background: #000; padding: 100px 0; overflow: hidden; }
+.section-mentor { background: var(--dark); padding: 100px 0; overflow: hidden; }
 .mentor-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
 .mentor-image { position: relative; display: flex; justify-content: center; }
 .mentor-photo { width: 100%; max-width: 400px; display: block; }
