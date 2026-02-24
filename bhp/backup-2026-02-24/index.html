@@ -82,34 +82,19 @@
 
     <!-- Topbar -->
     <div class="topbar" role="alert">
-        <strong>BHP — Business High Performance</strong> · Febracis Santo André · <span class="event-date-placeholder">Data em breve</span>
+        <strong>BHP — Business High Performance</strong> · Febracis Santo André
     </div>
 
     <main>
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
-        <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" id="heroVideo">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="heroVideo">
             <source src="https://raw.githubusercontent.com/revolutedigital/FEBRACISABC/main/bhp-hero.mp4" type="video/mp4">
         </video>
         <script>
-          // Lazy-load video: start only after page is interactive
-          (function() {
-            var hv = document.getElementById('heroVideo');
-            function startVideo() {
-              hv.preload = 'metadata';
-              hv.load();
-              hv.addEventListener('loadedmetadata', function() {
-                hv.currentTime = 30;
-                hv.play().catch(function(){});
-              }, { once: true });
-            }
-            if (document.readyState === 'complete' || document.readyState === 'interactive') {
-              setTimeout(startVideo, 100);
-            } else {
-              document.addEventListener('DOMContentLoaded', function() { setTimeout(startVideo, 100); });
-            }
-          })();
+          var hv = document.getElementById('heroVideo');
+          hv.addEventListener('loadedmetadata', function() { hv.currentTime = 30; });
         </script>
         <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -207,16 +192,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA INTERMEDIÁRIO ===== -->
-    <div class="cta-strip">
-        <div class="container text-center">
-            <button type="button" class="btn-primary open-form-popup" data-section="cta-pos-problema">
-                Quero Participar
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-    </div>
-
     <!-- ===== O QUE É O BHP ===== -->
     <section class="section-method" id="bhp">
         <div class="container">
@@ -300,16 +275,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA INTERMEDIÁRIO ===== -->
-    <div class="cta-strip">
-        <div class="container text-center">
-            <button type="button" class="btn-primary open-form-popup" data-section="cta-pos-pilares">
-                Quero Participar
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-    </div>
-
     <!-- ===== VISUAL BREAK ===== -->
     <section class="visual-break" aria-label="Citação">
         <div class="overlay" aria-hidden="true"></div>
@@ -374,16 +339,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA INTERMEDIÁRIO ===== -->
-    <div class="cta-strip">
-        <div class="container text-center">
-            <button type="button" class="btn-primary open-form-popup" data-section="cta-pos-ferramentas">
-                Quero Participar
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-    </div>
-
     <!-- ===== PARA QUEM É ===== -->
     <section class="section-audience" id="para-quem">
         <div class="container text-center">
@@ -430,62 +385,6 @@
         </div>
     </section>
 
-    <!-- ===== CTA INTERMEDIÁRIO ===== -->
-    <div class="cta-strip">
-        <div class="container text-center">
-            <button type="button" class="btn-primary open-form-popup" data-section="cta-pos-publico">
-                Quero Participar
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- ===== SOBRE A FEBRACIS ===== -->
-    <section class="section-febracis" id="febracis">
-        <div class="container">
-            <div class="febracis-content">
-                <div class="febracis-text">
-                    <span class="section-label">Sobre a Febracis</span>
-                    <h2 class="section-title">A maior escola de <span class="text-accent">Coaching e Negócios</span> da América Latina</h2>
-                    <p>
-                        A <strong>Febracis</strong> (Federação Brasileira de Coaching Integral Sistêmico) é referência
-                        mundial em desenvolvimento humano e empresarial. Fundada por <strong>Paulo Vieira</strong>,
-                        PhD em Business Administration e autor best-seller com mais de <strong>10 milhões de livros vendidos</strong>,
-                        a Febracis já transformou a vida de milhares de pessoas em todo o Brasil.
-                    </p>
-                    <p>
-                        Com a metodologia exclusiva do <strong>Coaching Integral Sistêmico (CIS)</strong>,
-                        a Febracis forma coaches profissionais, treina líderes empresariais e oferece
-                        programas de alta performance que geram resultados mensuráveis na vida pessoal e nos negócios.
-                    </p>
-                    <p>
-                        A unidade <strong>Febracis ABC Paulista</strong>, em Santo André, traz toda essa expertise
-                        para a região do Grande ABC, com acompanhamento personalizado e uma equipe de
-                        coaches dedicada ao seu crescimento.
-                    </p>
-                </div>
-                <div class="febracis-numbers">
-                    <div class="febracis-stat glass-card">
-                        <div class="febracis-stat-number">10M+</div>
-                        <div class="febracis-stat-label">Livros vendidos por Paulo Vieira</div>
-                    </div>
-                    <div class="febracis-stat glass-card">
-                        <div class="febracis-stat-number">30+</div>
-                        <div class="febracis-stat-label">Unidades em todo o Brasil</div>
-                    </div>
-                    <div class="febracis-stat glass-card">
-                        <div class="febracis-stat-number">400K+</div>
-                        <div class="febracis-stat-label">Vidas transformadas</div>
-                    </div>
-                    <div class="febracis-stat glass-card">
-                        <div class="febracis-stat-number">#1</div>
-                        <div class="febracis-stat-label">Escola de Coaching da América Latina</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== MENTOR ===== -->
     <section class="section-mentor" id="mentor">
         <div class="container">
@@ -500,25 +399,6 @@
                 <div class="mentor-image">
                     <img src="newton-vieira.png" alt="Newton Vieira - Master Coach e condutor do BHP" class="mentor-photo" loading="lazy">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== DATA DO EVENTO ===== -->
-    <section class="section-event-date" id="data">
-        <div class="container text-center">
-            <span class="section-label">Próxima Turma</span>
-            <h2 class="section-title">Anote na agenda: <span class="text-accent">BHP está chegando</span></h2>
-            <div class="event-date-card glass-card">
-                <div class="event-date-icon" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <!-- TODO: Atualizar com a data confirmada pelo cliente -->
-                <div class="event-date-info">
-                    <p class="event-date-value">Data a confirmar</p>
-                    <p class="event-date-sub">3 dias de imersão presencial · Febracis Santo André, SP</p>
-                </div>
-                <p class="event-date-notice">A data oficial será divulgada em breve. Cadastre-se para ser avisado em primeira mão!</p>
             </div>
         </div>
     </section>

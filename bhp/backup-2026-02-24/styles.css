@@ -95,9 +95,6 @@ a { text-decoration: none; color: inherit; }
 .btn-primary:hover::after { left: 100%; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(27,63,123,0.5); }
 
-/* ----- CTA Strip (Intermediate) ----- */
-.cta-strip { padding: 48px 0; background: linear-gradient(135deg, rgba(27,63,123,0.08) 0%, rgba(212,168,73,0.04) 100%); border-top: 1px solid rgba(27,63,123,0.12); border-bottom: 1px solid rgba(27,63,123,0.12); }
-
 /* ----- Social Proof Bar ----- */
 .social-proof-bar { background: linear-gradient(135deg, var(--blue-dark), var(--blue)); border-top: 1px solid rgba(42,82,152,0.4); border-bottom: 1px solid rgba(42,82,152,0.4); padding: 48px 0; }
 .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
@@ -165,17 +162,6 @@ section { padding: 100px 0; }
 .audience-card p { font-size: 1rem; color: var(--gray-light); line-height: 1.6; }
 .audience-card strong { color: var(--white); }
 
-/* ----- Febracis Section ----- */
-.section-febracis { background: linear-gradient(180deg, var(--dark) 0%, rgba(27,63,123,0.12) 100%); }
-.febracis-content { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; }
-.febracis-text h2 { margin-bottom: 24px; }
-.febracis-text p { color: var(--gray-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
-.febracis-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.febracis-stat { padding: 28px 20px; text-align: center; transition: border-color 0.3s ease, transform 0.3s ease; }
-.febracis-stat:hover { border-color: rgba(27,63,123,0.4); transform: translateY(-4px); }
-.febracis-stat-number { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--accent); line-height: 1.1; margin-bottom: 6px; }
-.febracis-stat-label { font-size: 0.8rem; color: var(--gray-light); line-height: 1.4; }
-
 /* ----- Trainer Section ----- */
 .section-trainer { background: linear-gradient(135deg, var(--dark) 0%, rgba(27,63,123,0.18) 50%, var(--dark) 100%); position: relative; overflow: hidden; }
 .trainer-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
@@ -195,15 +181,6 @@ section { padding: 100px 0; }
 .mentor-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; color: var(--white); }
 .mentor-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; }
 .mentor-content p { font-size: 0.95rem; color: var(--gray-light); line-height: 1.7; margin-bottom: 16px; }
-
-/* ----- Event Date Placeholder ----- */
-.event-date-placeholder { color: var(--accent); font-weight: 800; }
-.section-event-date { background: var(--dark); padding: 80px 0; }
-.event-date-card { max-width: 640px; margin: 0 auto; padding: 48px 40px; text-align: center; }
-.event-date-icon { color: var(--accent); margin-bottom: 20px; }
-.event-date-value { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: var(--accent); margin-bottom: 8px; }
-.event-date-sub { font-size: 1rem; color: var(--gray-light); margin-bottom: 20px; }
-.event-date-notice { font-size: 0.9rem; color: var(--gray); line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; }
 
 /* ----- CTA Section ----- */
 .section-cta { background: radial-gradient(ellipse at 30% 40%, rgba(27,63,123,0.2) 0%, transparent 50%), radial-gradient(ellipse at 70% 60%, rgba(212,168,73,0.08) 0%, var(--dark) 70%); padding: 120px 0; text-align: center; }
@@ -331,8 +308,6 @@ input:focus-visible { outline: none; }
   .mentor-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
   .mentor-image { order: -1; }
   .mentor-photo { max-width: 240px; margin: 0 auto; }
-  .febracis-content { grid-template-columns: 1fr; gap: 32px; }
-  .febracis-numbers { grid-template-columns: 1fr 1fr; gap: 12px; }
   .trainer-content { grid-template-columns: 1fr; gap: 32px; }
   .trainer-image-wrapper { max-width: 300px; margin: 0 auto; }
   .trainer-text h3 { text-align: center; font-size: 2rem; }
@@ -341,8 +316,6 @@ input:focus-visible { outline: none; }
   .local-map { aspect-ratio: 16/9; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
-  .section-event-date { padding: 52px 0; }
-  .event-date-card { padding: 32px 24px; }
   .section-cta { padding: 72px 0; }
   .visual-break { height: 35vh; min-height: 280px; }
 

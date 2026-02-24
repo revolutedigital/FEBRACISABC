@@ -12,25 +12,18 @@
 
   if (preloaderFill) {
     const interval = setInterval(() => {
-      progress += Math.random() * 20 + 10;
+      progress += Math.random() * 15 + 5;
       if (progress > 90) progress = 90;
       preloaderFill.style.width = progress + '%';
-    }, 100);
+    }, 150);
 
-    // Use DOMContentLoaded instead of load to avoid waiting for video buffer
-    const dismissPreloader = () => {
+    window.addEventListener('load', () => {
       clearInterval(interval);
       preloaderFill.style.width = '100%';
       setTimeout(() => {
         if (preloader) preloader.classList.add('done');
-      }, 300);
-    };
-
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      dismissPreloader();
-    } else {
-      document.addEventListener('DOMContentLoaded', dismissPreloader);
-    }
+      }, 400);
+    });
   }
 })();
 
@@ -240,31 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from(localMap, {
       x: mobileAnim ? 0 : 60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
       scrollTrigger: { trigger: localMap, start: 'top 80%', once: true }
-    });
-  }
-
-  // ============ FEBRACIS SECTION ANIMATION ============
-  const febracisText = document.querySelector('.febracis-text');
-  const febracisNumbers = document.querySelector('.febracis-numbers');
-  if (febracisText) {
-    gsap.from(febracisText, {
-      x: mobileAnim ? 0 : -60, y: mobileAnim ? 30 : 0, opacity: 0, duration: mobileAnim ? 0.6 : 1, ease: 'power3.out',
-      scrollTrigger: { trigger: febracisText, start: 'top 80%', once: true }
-    });
-  }
-  if (febracisNumbers) {
-    gsap.from(febracisNumbers.children, {
-      y: 40, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
-      scrollTrigger: { trigger: febracisNumbers, start: 'top 85%', once: true }
-    });
-  }
-
-  // ============ EVENT DATE ANIMATION ============
-  const eventDateCard = document.querySelector('.event-date-card');
-  if (eventDateCard) {
-    gsap.from(eventDateCard, {
-      y: 40, opacity: 0, scale: 0.95, duration: 0.8, ease: 'power3.out',
-      scrollTrigger: { trigger: eventDateCard, start: 'top 85%', once: true }
     });
   }
 
