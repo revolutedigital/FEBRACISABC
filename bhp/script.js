@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Send to Make.com webhook
-      fetch('https://hook.us2.make.com/u4v5bx41riwy7koldy92h22vhqx99sx1', {
+      fetch('https://hook.us2.make.com/je1hi66lzfko44ksaidcfwp48dqtbykj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, whatsapp, cargo, faturamento, source: 'LP - MKTPMWBHP - Revolute' })
