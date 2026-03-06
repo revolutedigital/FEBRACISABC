@@ -439,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = captureForm.querySelector('#capture-email').value;
       const whatsapp = captureForm.querySelector('#capture-whatsapp').value;
       const cargo = captureForm.querySelector('#capture-cargo').value;
-      const faturamento = formSelect ? formSelect.value : '';
 
       if (typeof dataLayer !== 'undefined') {
         dataLayer.push({
@@ -448,8 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
           lead_name: name,
           lead_email: email,
           lead_whatsapp: whatsapp,
-          lead_cargo: cargo,
-          lead_faturamento: faturamento
+          lead_cargo: cargo
         });
       }
 
@@ -457,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch('https://hook.us2.make.com/je1hi66lzfko44ksaidcfwp48dqtbykj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, whatsapp, cargo, faturamento, source: 'LP - MKTPMWBHP - Revolute' })
+        body: JSON.stringify({ name, email, whatsapp, cargo, source: 'LP - MKTPMWBHP - Revolute' })
       }).catch(() => {});
 
       // Show success state
