@@ -74,6 +74,11 @@
         </div>
     </div>
 
+    <!-- Sticky Alert Bar -->
+    <div class="sticky-alert" role="banner">
+        <strong>EXCLUSIVO</strong> <span class="sticky-alert-sep">|</span> Apenas para Empresários com faturamento acima de R$200 mil/mês
+    </div>
+
     <!-- Skip to Content -->
     <a href="#inicio" class="skip-link">Pular para o conteúdo</a>
 
@@ -730,11 +735,15 @@
                     </span>
                 </div>
                 <div class="form-group">
-                    <label for="capture-cargo" class="sr-only">Cargo</label>
-                    <input type="text" id="capture-cargo" placeholder="Cargo" required autocomplete="organization-title" aria-required="true">
-                    <span class="form-check" aria-hidden="true">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    </span>
+                    <label for="capture-cargo" class="sr-only">Selecione o seu cargo</label>
+                    <select id="capture-cargo" required aria-required="true">
+                        <option value="" disabled selected>Selecione o seu cargo</option>
+                        <option value="Empresário/Proprietário">Empresário/Proprietário</option>
+                        <option value="Diretor/CEO">Diretor/CEO</option>
+                        <option value="Gestor/Gerente">Gestor/Gerente</option>
+                        <option value="Sócio/Diretor">Sócio/Diretor</option>
+                        <option value="Profissional Liberal">Profissional Liberal</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="capture-faturamento" class="sr-only">Faturamento médio da empresa (mensal)</label>

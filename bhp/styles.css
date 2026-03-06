@@ -36,6 +36,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  padding-top: 26px;
 }
 
 img { max-width: 100%; display: block; }
@@ -57,12 +58,17 @@ a { text-decoration: none; color: inherit; }
 .preloader-bar { width: 200px; height: 3px; background: var(--dark-3); border-radius: 2px; overflow: hidden; margin: 0 auto; }
 .preloader-fill { height: 100%; width: 0%; background: var(--gradient-blue); border-radius: 2px; transition: width 0.3s ease; }
 
+/* ----- Sticky Alert Bar ----- */
+.sticky-alert { position: fixed; top: 0; left: 0; right: 0; z-index: 9998; background: var(--accent); color: var(--dark); text-align: center; padding: 6px 16px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; line-height: 1.3; }
+.sticky-alert strong { font-weight: 900; text-transform: uppercase; }
+.sticky-alert-sep { margin: 0 6px; opacity: 0.5; }
+
 /* ----- Skip Link ----- */
 .skip-link { position: absolute; top: -100%; left: 16px; z-index: 100000; padding: 12px 24px; background: var(--accent); color: var(--dark); font-weight: 700; font-size: 0.9rem; border-radius: 0 0 8px 8px; transition: top 0.3s ease; }
 .skip-link:focus { top: 0; }
 
 /* ----- Progress Bar ----- */
-.progress-bar { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: var(--gradient-blue); transform: scaleX(0); transform-origin: left; z-index: 9999; }
+.progress-bar { position: fixed; top: 26px; left: 0; width: 100%; height: 3px; background: var(--gradient-blue); transform: scaleX(0); transform-origin: left; z-index: 9999; }
 
 /* ----- Topbar ----- */
 .topbar { background: var(--blue); color: var(--white); text-align: center; padding: 12px 16px; font-size: 0.85rem; font-weight: 600; }

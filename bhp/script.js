@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const captureForm = document.getElementById('captureForm');
   if (captureForm) {
     const formInputs = captureForm.querySelectorAll('.form-group input');
-    const formSelect = captureForm.querySelector('#capture-faturamento');
+    const formSelects = captureForm.querySelectorAll('.form-group select');
 
     formInputs.forEach(input => {
       input.addEventListener('input', () => {
@@ -404,10 +404,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    if (formSelect) {
-      formSelect.addEventListener('change', () => {
-        formSelect.classList.remove('invalid');
-        formSelect.style.color = '#fff';
+    formSelects.forEach(sel => {
+      sel.addEventListener('change', () => {
+        sel.classList.remove('invalid');
+        sel.style.color = '#fff';
         if (!captureForm.dataset.touched) {
           captureForm.dataset.touched = 'true';
           if (typeof dataLayer !== 'undefined') {
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-    }
+    });
 
     captureForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -427,10 +427,12 @@ document.addEventListener('DOMContentLoaded', () => {
           valid = false;
         }
       });
-      if (formSelect && !formSelect.value) {
-        formSelect.classList.add('invalid');
-        valid = false;
-      }
+      formSelects.forEach(sel => {
+        if (!sel.value) {
+          sel.classList.add('invalid');
+          valid = false;
+        }
+      });
       if (!valid) return;
 
       const name = captureForm.querySelector('#capture-name').value;
